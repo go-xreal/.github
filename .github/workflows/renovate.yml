@@ -1,5 +1,16 @@
 name: Renovate
 
+# This file reached the default branch without Actions registering it.
+# A workflow is indexed at the moment it is PUSHED to the branch that is
+# default at that instant, and this repository was created empty: the
+# first push both set the default branch and carried the file, and the
+# two did not land in the order the indexer needed. Its sibling
+# go-viture/.github, created seven seconds earlier from the same script
+# with a byte-identical file, registered at the second of its push.
+#
+# Merging this puts a new commit on the default branch, which is what
+# makes Actions look again.
+
 on:
   schedule:
     # 23:05 UTC. The 00/11/22/33/44 walk the fleet used is full: 115 of its 120 slots are taken. This sits on a five-minute grid instead, at least 25 minutes from any other new one, in an hour holding four runners rather than five.
